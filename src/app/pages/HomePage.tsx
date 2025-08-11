@@ -1,7 +1,14 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { Bot, Clock, Smartphone, ShoppingCart } from "lucide-react";
+import {
+  Bot,
+  Clock,
+  TrendingUp,
+  Star,
+  Shield,
+  Headphones,
+  Bell,
+} from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -13,11 +20,10 @@ const HomePage = () => {
             <div className="flex justify-center mb-6">
               <Image
                 src="/icon-meino.svg"
-                alt="AI Waiter"
+                alt="Meenu"
                 width={64}
                 height={64}
                 className="h-16 w-16 text-orange-500"
-                priority
               />
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -26,78 +32,80 @@ const HomePage = () => {
                 AI waiter in seconds
               </span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Skip the wait, skip the hassle. Our AI-powered ordering system
-              understands exactly what you want and gets it right every time.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your restaurant with an intelligent AI assistant that
+              takes orders, answers menu questions, and enhances customer
+              service. Boost efficiency, increase sales, and delight your
+              customers while giving your staff more time to focus on what
+              matters most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/chat"
-                className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all duration-200 hover:shadow-lg hover:scale-105"
-              >
-                <Bot className="h-5 w-5 mr-2" />
-                Start Order
-              </Link>
-              <Link
-                href="/menu"
-                className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-orange-300 hover:text-orange-600 transition-all duration-200"
-              >
-                View Menu
-              </Link>
+              <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all duration-200 hover:shadow-lg hover:scale-105">
+                <Bell className="h-5 w-5 mr-2" />
+                Join Waitlist
+              </button>
+              <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-orange-300 hover:text-orange-600 transition-all duration-200">
+                <Headphones className="h-5 w-5 mr-2" />
+                Learn More
+              </button>
             </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Be among the first to experience the future of restaurant service
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Benefits for Restaurant Owners */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose AI Waiter?
+              Order from our
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience the future of restaurant ordering with our intelligent
-              system
+              Skip the wait, skip the hassle. Our AI-powered ordering system
+              understands exactly what you want and gets it right every time.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-xl border border-gray-100 hover:border-orange-200 hover:shadow-md transition-all duration-200">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange-100 text-orange-600 mb-4">
-                <Clock className="h-6 w-6" />
+                <TrendingUp className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Lightning Fast
+                Increase Revenue
               </h3>
               <p className="text-gray-600">
-                Order in seconds, not minutes. Our AI understands your
-                preferences instantly.
+                AI-powered upselling suggests add-ons and premium items,
+                boosting average order value by up to 25%.
               </p>
             </div>
 
             <div className="text-center p-6 rounded-xl border border-gray-100 hover:border-orange-200 hover:shadow-md transition-all duration-200">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-4">
-                <Smartphone className="h-6 w-6" />
+                <Clock className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Mobile Friendly
+                Faster Service
               </h3>
               <p className="text-gray-600">
-                Perfect experience on any device. Order from anywhere, anytime.
+                Reduce wait times by 40% with instant order processing and
+                real-time menu recommendations.
               </p>
             </div>
 
             <div className="text-center p-6 rounded-xl border border-gray-100 hover:border-orange-200 hover:shadow-md transition-all duration-200">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mb-4">
-                <ShoppingCart className="h-6 w-6" />
+                <Star className="h-6 w-6" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Smart Ordering
+                Happy Customers
               </h3>
               <p className="text-gray-600">
-                AI-powered recommendations based on your tastes and dietary
-                preferences.
+                Personalized service and accurate orders lead to higher
+                satisfaction scores and repeat business.
               </p>
             </div>
           </div>
@@ -108,19 +116,26 @@ const HomePage = () => {
       <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to experience the future?
+            Be First in Line
           </h2>
           <p className="text-xl text-orange-100 mb-8">
-            Join thousands of satisfied customers who&apos;ve made the smart
-            choice.
+            Join the waitlist and be among the first restaurants to experience
+            the future of AI-powered service.
           </p>
-          <Link
-            href="/chat"
-            className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-orange-600 bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:scale-105"
-          >
-            <Bot className="h-5 w-5 mr-2" />
-            Talk to AI Waiter Now
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-orange-600 bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:scale-105">
+              <Bell className="h-5 w-5 mr-2" />
+              Join Waitlist
+            </button>
+            <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-white border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">
+              <Headphones className="h-5 w-5 mr-2" />
+              Request Demo
+            </button>
+          </div>
+          <p className="text-orange-100 mt-4 text-sm">
+            Early access for waitlist members • Priority support • Exclusive
+            launch pricing
+          </p>
         </div>
       </section>
     </div>

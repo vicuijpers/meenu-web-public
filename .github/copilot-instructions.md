@@ -7,7 +7,6 @@ Repo is Next.js 15 (App Router) + React 19 + Tailwind CSS v4. Use pnpm.
 - App Router in `src/app` with global shell in `app/layout.tsx` (Geist fonts, sticky header, nav via `next/link`, `<main>{children}</main>`).
 - Route wrappers are minimal and import presentational pages from `src/app/pages/*`:
   - `app/page.tsx` → `pages/HomePage.tsx`
-  - `app/menu/page.tsx` → `pages/MenuPage.tsx` (exports `export const dynamic = "force-static";` for pre-render)
   - `app/chat/page.tsx` → `pages/ChatPage.tsx`
 - Styling via Tailwind v4: `@import "tailwindcss"` in `app/globals.css` and `postcss.config.mjs` with `@tailwindcss/postcss`. Theme tokens set in `@theme inline` + CSS vars.
 - Images: `next.config.ts` allows `https://images.pexels.com/photos/**`; local assets under `public/`.
@@ -17,13 +16,13 @@ Repo is Next.js 15 (App Router) + React 19 + Tailwind CSS v4. Use pnpm.
 
 - Keep route files tiny; put most UI in `src/app/pages/*`.
 - Mark client-interactive components with "use client" at file top.
-- Use `next/link`, `next/image` (not `react-router-dom`). `src/app/components/Navigation.tsx` is legacy and unused—don’t copy its router pattern.
+- Use `next/link`, `next/image` (not `react-router-dom`). `src/app/components/Navigation.tsx` provides a simple header.
 - Use Tailwind utilities in JSX; rely on theme tokens from `globals.css`.
 - For static pages, opt into pre-rendering with `export const dynamic = "force-static";`.
 
 ## Data & state
 
-- Menu is mocked in `MenuPage.tsx` via `useEffect` + `setTimeout`; keep the `MenuItem` shape if swapping to real fetch.
+- Menu page has been removed in favor of a global AI chat flow.
 - Chat is a client-only simulation in `ChatPage.tsx` with `generateAIResponse`. Preserve the `Message` shape and `isTyping` UX if integrating a backend.
 
 ## Workflows
@@ -37,7 +36,7 @@ Repo is Next.js 15 (App Router) + React 19 + Tailwind CSS v4. Use pnpm.
 
 - Shell/Nav example: `app/layout.tsx`
 - Home patterns + icons: `app/pages/HomePage.tsx`
-- Menu grid/cards, filtering, responsive images: `app/pages/MenuPage.tsx`
+- Floating chat widget is injected globally via `app/layout.tsx` and implemented in `app/components/ChatWidget.tsx`.
 - Chat list, typing indicator, input handling: `app/pages/ChatPage.tsx`
 - Theme and tokens: `app/globals.css`
 

@@ -35,24 +35,14 @@ const Navigation = () => {
               Home
             </Link>
             <Link
-              href="/menu"
+              href="/pricing"
               className={
-                isActive("/menu")
+                isActive("/pricing")
                   ? "text-orange-600"
                   : "text-gray-700 hover:text-orange-600"
               }
             >
-              Menu
-            </Link>
-            <Link
-              href="/chat"
-              className={
-                isActive("/chat")
-                  ? "bg-orange-600 text-white px-3 py-1.5 rounded-full"
-                  : "bg-orange-500 text-white hover:bg-orange-600 px-3 py-1.5 rounded-full"
-              }
-            >
-              Start Order
+              Pricing
             </Link>
           </nav>
 
@@ -88,15 +78,15 @@ const Navigation = () => {
                 Home
               </Link>
               <Link
-                href="/menu"
+                href="/pricing"
                 onClick={() => setIsOpen(false)}
                 className={
-                  isActive("/menu")
+                  isActive("/pricing")
                     ? "block px-3 py-2 rounded-md text-base font-medium text-orange-600 bg-orange-50"
                     : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
                 }
               >
-                Menu
+                Pricing
               </Link>
               <Link
                 href="/chat"
