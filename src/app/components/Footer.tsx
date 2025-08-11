@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { Bell, Headphones } from "lucide-react";
+import { useLocale } from '@/lib/locale-context';
 
 export default function Footer() {
+  const { t } = useLocale();
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-gray-200 bg-gradient-to-r from-orange-500 to-orange-600">
@@ -11,11 +13,10 @@ export default function Footer() {
       <div className="">
         <div className="max-w-6xl mx-auto px-4 py-10 text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-3">
-            Be First in Line
+            {t('footer.beFirstTitle')}
           </h2>
           <p className="text-base sm:text-lg text-orange-100 mb-6">
-            Join the waitlist and be among the first restaurants to experience
-            the future of AI-powered service.
+            {t('footer.beFirstSubtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
@@ -23,7 +24,7 @@ export default function Footer() {
               className="inline-flex items-center px-6 py-3 rounded-full text-sm sm:text-base font-semibold text-orange-600 bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:scale-[1.02]"
             >
               <Bell className="h-5 w-5 mr-2" />
-              Join Waitlist
+              {t('footer.joinWaitlist')}
             </Link>
             <button
               onClick={() => {
@@ -33,12 +34,11 @@ export default function Footer() {
               aria-label="Open chat demo"
             >
               <Headphones className="h-5 w-5 mr-2" />
-              Try Demo
+              {t('footer.tryDemo')}
             </button>
           </div>
           <p className="text-orange-100 mt-4 text-xs sm:text-sm">
-            Early access for waitlist members • Priority support • Exclusive
-            launch pricing
+            {t('footer.earlyAccess')}
           </p>
         </div>
       </div>
@@ -52,13 +52,13 @@ export default function Footer() {
 
         <nav className="flex items-center gap-5">
           <Link href="/" className="text-white hover:text-orange-200">
-            Home
+            {t('nav.home')}
           </Link>
           <Link href="/pricing" className="text-white hover:text-orange-200">
-            Pricing
+            {t('nav.pricing')}
           </Link>
           <Link href="/signup" className="text-white hover:text-orange-200">
-            Get Started
+            {t('nav.signup')}
           </Link>
         </nav>
       </div>

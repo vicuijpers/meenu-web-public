@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
 import ChatWidget from "@/app/components/ChatWidget";
+import { LocaleProvider } from "@/lib/locale-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-        <ChatWidget />
+        <LocaleProvider>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+          <ChatWidget />
+        </LocaleProvider>
       </body>
     </html>
   );

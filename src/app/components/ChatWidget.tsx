@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { Bot, Send, MessageCircle } from "lucide-react";
+import { useLocale } from '@/lib/locale-context';
 
 type Sender = "user" | "ai";
 
@@ -36,12 +37,13 @@ function generateAIResponse(userText: string): string {
 }
 
 export default function ChatWidget() {
+  const { t } = useLocale();
   const [open, setOpen] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm your AI server. Ask me anything about the menu or start an order.",
+      text: t('chat.welcomeMessage'),
       sender: "ai",
       timestamp: new Date(),
     },
@@ -95,7 +97,7 @@ export default function ChatWidget() {
           className="flex items-center gap-2 px-4 py-3 rounded-full bg-orange-500 text-white shadow-lg hover:bg-orange-600 transition"
         >
           <MessageCircle className="h-5 w-5" />
-          Chat
+          {t('common.chat')}
         </button>
       )}
 
@@ -107,15 +109,15 @@ export default function ChatWidget() {
               <Bot className="h-4 w-4 text-white" />
             </div>
             <div className="flex-1">
-              <p className="text-sm font-semibold text-gray-900">AI Server</p>
-              <p className="text-xs text-green-600">Online • Ready</p>
+              <p className="text-sm font-semibold text-gray-900">{t('chat.aiServer')}</p>
+              <p className="text-xs text-green-600">{t('chat.status')}</p>
             </div>
             <button
               aria-label="Close chat"
               onClick={() => setOpen(false)}
               className="text-gray-500 hover:text-gray-700 text-sm"
             >
-              Close
+              {t('common.close')}
             </button>
           </div>
 
@@ -152,7 +154,7 @@ export default function ChatWidget() {
             {isTyping && (
               <div className="flex items-center gap-2 text-gray-500 text-xs">
                 <Bot className="h-3 w-3" />
-                typing…
+                {t('chat.typing')}
               </div>
             )}
             <div ref={messagesEndRef} />
@@ -164,7 +166,7 @@ export default function ChatWidget() {
               <input
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
-                placeholder="Ask or order…"
+                placeholder={t('chat.placeholder')}
                 className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
               <button

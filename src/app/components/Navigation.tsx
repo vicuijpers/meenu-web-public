@@ -5,10 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import { useLocale } from "@/lib/locale-context";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const { t } = useLocale();
 
   const isActive = (path: string) => pathname === path;
 
@@ -37,7 +40,7 @@ const Navigation = () => {
                   : "text-gray-700 hover:text-orange-600"
               }
             >
-              Welcome
+              {t("nav.home")}
             </Link>
             <Link
               href="/features"
@@ -47,7 +50,7 @@ const Navigation = () => {
                   : "text-gray-700 hover:text-orange-600"
               }
             >
-              Features
+              {t("nav.features")}
             </Link>
             <Link
               href="/pricing"
@@ -57,7 +60,7 @@ const Navigation = () => {
                   : "text-gray-700 hover:text-orange-600"
               }
             >
-              Pricing
+              {t("nav.pricing")}
             </Link>
             <Link
               href="/signup"
@@ -67,8 +70,9 @@ const Navigation = () => {
                   : "border-gray-200 text-gray-700 hover:border-orange-300 hover:text-orange-600"
               }`}
             >
-              Get Started
+              {t("nav.signup")}
             </Link>
+            <LanguageSwitcher />
           </nav>
 
           {/* Mobile menu button */}
@@ -100,7 +104,7 @@ const Navigation = () => {
                     : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
                 }
               >
-                Welcome
+                {t("nav.home")}
               </Link>
               <Link
                 href="/pricing"
@@ -111,7 +115,7 @@ const Navigation = () => {
                     : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
                 }
               >
-                Pricing
+                {t("nav.pricing")}
               </Link>
               <Link
                 href="/features"
@@ -122,7 +126,7 @@ const Navigation = () => {
                     : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
                 }
               >
-                Features
+                {t("nav.features")}
               </Link>
               <Link
                 href="/signup"
@@ -133,15 +137,18 @@ const Navigation = () => {
                     : "border-gray-200 text-gray-700 hover:border-orange-300 hover:text-orange-600"
                 }`}
               >
-                Get Started
+                {t("nav.signup")}
               </Link>
               <Link
                 href="/chat"
                 onClick={() => setIsOpen(false)}
                 className="block mx-3 my-2 px-4 py-2 rounded-full text-center text-base font-medium bg-orange-500 text-white hover:bg-orange-600"
               >
-                Start Order
+                {t("common.chat")}
               </Link>
+              <div className="px-3 py-2">
+                <LanguageSwitcher />
+              </div>
             </div>
           </nav>
         )}

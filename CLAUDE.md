@@ -42,6 +42,7 @@ This is a Next.js 15 application using the App Router with React 19 and Tailwind
 - Keep route files minimal - main UI logic goes in `src/app/pages/*`
 - Use `next/link` and `next/image` (not react-router-dom)
 - Prefer Tailwind utilities over custom CSS
+- For translated content, use the `useLocale()` hook and `t()` function
 
 ### File Organization
 - Components: `src/app/components/`
@@ -61,6 +62,14 @@ This is a Next.js 15 application using the App Router with React 19 and Tailwind
 - Toggleable via `window.dispatchEvent(new Event("toggle-chat"))`
 - Simulated AI responses with menu-aware logic
 - Typing indicators and message timestamps
+
+### Internationalization (i18n)
+- Multi-language support for English, Spanish, French, German, and Dutch
+- Context-based translation system using `useLocale()` hook
+- Language switcher in navigation (desktop and mobile)
+- Translation files in `src/lib/translations/` (JSON format)
+- Persistent language selection stored in localStorage
+- Auto-detection of browser language on first visit
 
 ### Image Handling
 - Local assets in `public/` directory

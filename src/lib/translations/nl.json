@@ -1,0 +1,47 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout",
+    "close": "Sluiten",
+    "send": "Verzenden",
+    "chat": "Chat"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Functies",
+    "pricing": "Prijzen",
+    "signup": "Aanmelden",
+    "language": "Taal"
+  },
+  "home": {
+    "title": "Bestel bij onze",
+    "titleHighlight": "AI-ober in seconden",
+    "subtitle": "Transformeer je restaurant met een intelligente AI-assistent die bestellingen opneemt, menuvragen beantwoordt en de klantenservice verbetert. Verhoog de efficiëntie, vergroot de omzet en verras je klanten terwijl je je personeel meer tijd geeft om zich te richten op wat het belangrijkst is.",
+    "joinWaitlist": "Wachtlijst Aanmelden",
+    "learnMore": "Meer Weten",
+    "waitlistDescription": "Wees een van de eersten die de toekomst van restaurantservice ervaren",
+    "benefitsTitle": "Bestel bij onze",
+    "benefitsSubtitle": "Sla het wachten over, sla de gedoe over. Ons AI-aangedreven bestelsysteem begrijpt precies wat je wilt en doet het elke keer goed.",
+    "increaseRevenueTitle": "Omzet Verhogen",
+    "increaseRevenueDesc": "AI-aangedreven upselling stelt toevoegingen en premium items voor, waardoor de gemiddelde bestelwaarde met wel 25% stijgt.",
+    "fasterServiceTitle": "Snellere Service",
+    "fasterServiceDesc": "Verminder wachttijden met 40% door directe bestelverwerking en real-time menu-aanbevelingen.",
+    "happyCustomersTitle": "Tevreden Klanten",
+    "happyCustomersDesc": "Gepersonaliseerde service en nauwkeurige bestellingen leiden tot hogere tevredenheidscores en herhaalde zaken."
+  },
+  "chat": {
+    "aiServer": "AI Server",
+    "status": "Online • Klaar",
+    "placeholder": "Vraag of bestel...",
+    "typing": "bezig met typen...",
+    "welcomeMessage": "Hallo! Ik ben je AI-server. Vraag me alles over het menu of begin een bestelling."
+  },
+  "footer": {
+    "copyright": "© 2024 Meino. Alle rechten voorbehouden.",
+    "beFirstTitle": "Wees Eerste in de Rij",
+    "beFirstSubtitle": "Meld je aan voor de wachtlijst en wees een van de eerste restaurants die de toekomst van AI-aangedreven service ervaren.",
+    "joinWaitlist": "Wachtlijst Aanmelden",
+    "tryDemo": "Demo Proberen",
+    "earlyAccess": "Vroege toegang voor wachtlijstleden • Prioriteitsondersteuning • Exclusieve lanceeringsvoorwaarden"
+  }
+}

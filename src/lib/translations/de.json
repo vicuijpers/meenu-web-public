@@ -1,0 +1,47 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "close": "Schließen",
+    "send": "Senden",
+    "chat": "Chat"
+  },
+  "nav": {
+    "home": "Startseite",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "signup": "Anmelden",
+    "language": "Sprache"
+  },
+  "home": {
+    "title": "Bestellen Sie bei unserem",
+    "titleHighlight": "KI-Kellner in Sekunden",
+    "subtitle": "Verwandeln Sie Ihr Restaurant mit einem intelligenten KI-Assistenten, der Bestellungen entgegennimmt, Menüfragen beantwortet und den Kundenservice verbessert. Steigern Sie die Effizienz, erhöhen Sie den Umsatz und begeistern Sie Ihre Kunden, während Sie Ihrem Personal mehr Zeit geben, sich auf das Wichtigste zu konzentrieren.",
+    "joinWaitlist": "Warteliste Beitreten",
+    "learnMore": "Mehr Erfahren",
+    "waitlistDescription": "Seien Sie unter den Ersten, die die Zukunft des Restaurantservice erleben",
+    "benefitsTitle": "Bestellen Sie bei unserem",
+    "benefitsSubtitle": "Überspringen Sie das Warten, überspringen Sie den Ärger. Unser KI-gestütztes Bestellsystem versteht genau, was Sie wollen, und macht es jedes Mal richtig.",
+    "increaseRevenueTitle": "Umsatz Steigern",
+    "increaseRevenueDesc": "KI-gestütztes Upselling schlägt Zusätze und Premium-Artikel vor und steigert den durchschnittlichen Bestellwert um bis zu 25%.",
+    "fasterServiceTitle": "Schnellerer Service",
+    "fasterServiceDesc": "Reduzieren Sie Wartezeiten um 40% mit sofortiger Bestellabwicklung und Echtzeit-Menüempfehlungen.",
+    "happyCustomersTitle": "Zufriedene Kunden",
+    "happyCustomersDesc": "Personalisierter Service und genaue Bestellungen führen zu höheren Zufriedenheitswerten und Wiederholungsgeschäften."
+  },
+  "chat": {
+    "aiServer": "KI-Server",
+    "status": "Online • Bereit",
+    "placeholder": "Fragen oder bestellen…",
+    "typing": "tippt…",
+    "welcomeMessage": "Hallo! Ich bin Ihr KI-Server. Fragen Sie mich alles über die Speisekarte oder beginnen Sie eine Bestellung."
+  },
+  "footer": {
+    "copyright": "© 2024 Meino. Alle Rechte vorbehalten.",
+    "beFirstTitle": "Seien Sie Erste in der Reihe",
+    "beFirstSubtitle": "Treten Sie der Warteliste bei und seien Sie unter den ersten Restaurants, die die Zukunft des KI-gestützten Service erleben.",
+    "joinWaitlist": "Warteliste Beitreten",
+    "tryDemo": "Demo Ausprobieren",
+    "earlyAccess": "Früher Zugang für Wartelisten-Mitglieder • Prioritätssupport • Exklusive Launch-Preise"
+  }
+}

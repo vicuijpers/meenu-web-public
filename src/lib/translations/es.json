@@ -1,0 +1,47 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "close": "Cerrar",
+    "send": "Enviar",
+    "chat": "Chat"
+  },
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "pricing": "Precios",
+    "signup": "Registrarse",
+    "language": "Idioma"
+  },
+  "home": {
+    "title": "Ordena de nuestro",
+    "titleHighlight": "camarero IA en segundos",
+    "subtitle": "Transforma tu restaurante con un asistente inteligente de IA que toma pedidos, responde preguntas del menú y mejora el servicio al cliente. Aumenta la eficiencia, incrementa las ventas y deleita a tus clientes mientras das más tiempo a tu personal para enfocarse en lo que más importa.",
+    "joinWaitlist": "Unirse a Lista de Espera",
+    "learnMore": "Saber Más",
+    "waitlistDescription": "Sé de los primeros en experimentar el futuro del servicio de restaurantes",
+    "benefitsTitle": "Ordena de nuestro",
+    "benefitsSubtitle": "Evita la espera, evita las complicaciones. Nuestro sistema de pedidos con IA entiende exactamente lo que quieres y lo hace bien cada vez.",
+    "increaseRevenueTitle": "Aumentar Ingresos",
+    "increaseRevenueDesc": "La venta adicional impulsada por IA sugiere complementos y artículos premium, aumentando el valor promedio del pedido hasta un 25%.",
+    "fasterServiceTitle": "Servicio Más Rápido",
+    "fasterServiceDesc": "Reduce los tiempos de espera en un 40% con procesamiento instantáneo de pedidos y recomendaciones de menú en tiempo real.",
+    "happyCustomersTitle": "Clientes Felices",
+    "happyCustomersDesc": "El servicio personalizado y los pedidos precisos conducen a mayores puntuaciones de satisfacción y negocios repetidos."
+  },
+  "chat": {
+    "aiServer": "Servidor IA",
+    "status": "En línea • Listo",
+    "placeholder": "Pregunta o ordena…",
+    "typing": "escribiendo…",
+    "welcomeMessage": "¡Hola! Soy tu servidor de IA. Pregúntame cualquier cosa sobre el menú o inicia un pedido."
+  },
+  "footer": {
+    "copyright": "© 2024 Meino. Todos los derechos reservados.",
+    "beFirstTitle": "Sé el Primero en la Fila",
+    "beFirstSubtitle": "Únete a la lista de espera y sé de los primeros restaurantes en experimentar el futuro del servicio con IA.",
+    "joinWaitlist": "Unirse a Lista de Espera",
+    "tryDemo": "Probar Demo",
+    "earlyAccess": "Acceso temprano para miembros de lista de espera • Soporte prioritario • Precios exclusivos de lanzamiento"
+  }
+}

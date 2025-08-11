@@ -1,0 +1,47 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "close": "Close",
+    "send": "Send",
+    "chat": "Chat"
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features", 
+    "pricing": "Pricing",
+    "signup": "Sign Up",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Order from our",
+    "titleHighlight": "AI waiter in seconds",
+    "subtitle": "Transform your restaurant with an intelligent AI assistant that takes orders, answers menu questions, and enhances customer service. Boost efficiency, increase sales, and delight your customers while giving your staff more time to focus on what matters most.",
+    "joinWaitlist": "Join Waitlist",
+    "learnMore": "Learn More",
+    "waitlistDescription": "Be among the first to experience the future of restaurant service",
+    "benefitsTitle": "Order from our",
+    "benefitsSubtitle": "Skip the wait, skip the hassle. Our AI-powered ordering system understands exactly what you want and gets it right every time.",
+    "increaseRevenueTitle": "Increase Revenue",
+    "increaseRevenueDesc": "AI-powered upselling suggests add-ons and premium items, boosting average order value by up to 25%.",
+    "fasterServiceTitle": "Faster Service", 
+    "fasterServiceDesc": "Reduce wait times by 40% with instant order processing and real-time menu recommendations.",
+    "happyCustomersTitle": "Happy Customers",
+    "happyCustomersDesc": "Personalized service and accurate orders lead to higher satisfaction scores and repeat business."
+  },
+  "chat": {
+    "aiServer": "AI Server",
+    "status": "Online • Ready",
+    "placeholder": "Ask or order…",
+    "typing": "typing…",
+    "welcomeMessage": "Hello! I'm your AI server. Ask me anything about the menu or start an order."
+  },
+  "footer": {
+    "copyright": "© 2024 Meino. All rights reserved.",
+    "beFirstTitle": "Be First in Line",
+    "beFirstSubtitle": "Join the waitlist and be among the first restaurants to experience the future of AI-powered service.",
+    "joinWaitlist": "Join Waitlist",
+    "tryDemo": "Try Demo",
+    "earlyAccess": "Early access for waitlist members • Priority support • Exclusive launch pricing"
+  }
+}
