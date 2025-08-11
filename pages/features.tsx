@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   Bot,
   MessageSquare,
@@ -155,13 +156,13 @@ export default function FeaturesPage() {
           </div>
 
           <div className="text-center mt-10">
-            <a
+            <Link
               href="/chat"
               className="inline-flex items-center px-6 py-3 rounded-full text-base font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all duration-200 hover:shadow-lg hover:scale-[1.02]"
             >
               <Bot className="h-5 w-5 mr-2" />
               Try the AI waiter
-            </a>
+            </Link>
             <p className="text-xs text-gray-500 mt-3">
               No credit card required.
             </p>

@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Clock, TrendingUp, Star, Headphones, Bell } from "lucide-react";
-import { useLocale } from "@/lib/locale-context";
-import EmailModal from "@/app/components/ui/EmailModal";
+import { useLocale } from "../src/lib/locale-context";
+import EmailModal from "../src/components/EmailModal";
 
 const HomePage = () => {
   const { t } = useLocale();

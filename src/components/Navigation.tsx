@@ -1,32 +1,23 @@
 "use client";
-
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
-import { useLocale } from "@/lib/locale-context";
-import LanguageSwitcher from "./LanguageSwitcher";
+import { useRouter } from "next/router";
+import { Menu, X, Globe } from "lucide-react";
+import { useLocale } from "../lib/locale-context";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
+  const router = useRouter();
   const { t } = useLocale();
 
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => router.pathname === path;
 
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200 text-base">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-gray-900">
-            <Image
-              src="/icon-meino.svg"
-              alt="AI Waiter"
-              width={32}
-              height={32}
-            />
+            <img src="/icon-meino.svg" alt="AI Waiter" width={32} height={32} />
             <span className="font-semibold text-xl">AI Waiter</span>
           </Link>
 
@@ -72,7 +63,15 @@ const Navigation = () => {
             >
               {t("nav.signup")}
             </Link>
-            <LanguageSwitcher />
+            <div className="relative">
+              <button
+                aria-label="Language"
+                className="inline-flex items-center gap-2 px-3 py-2 text-gray-700 hover:text-orange-600 transition-colors"
+              >
+                <Globe className="h-4 w-4" />
+                <span className="hidden sm:inline">English</span>
+              </button>
+            </div>
           </nav>
 
           {/* Mobile menu button */}
@@ -139,16 +138,6 @@ const Navigation = () => {
               >
                 {t("nav.signup")}
               </Link>
-              <Link
-                href="/chat"
-                onClick={() => setIsOpen(false)}
-                className="block mx-3 my-2 px-4 py-2 rounded-full text-center text-base font-medium bg-orange-500 text-white hover:bg-orange-600"
-              >
-                {t("common.chat")}
-              </Link>
-              <div className="px-3 py-2">
-                <LanguageSwitcher />
-              </div>
             </div>
           </nav>
         )}
