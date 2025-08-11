@@ -24,7 +24,7 @@ const ComingSoonPage = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-6 leading-[1]">
-            {t("comingSoon.")}
+            {t("comingSoon.title")}
             <span className="text-orange-500 block">
               {t("comingSoon.titleHighlight")}
             </span>
