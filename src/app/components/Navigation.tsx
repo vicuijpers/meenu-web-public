@@ -37,7 +37,7 @@ const Navigation = () => {
                   : "text-gray-700 hover:text-orange-600"
               }
             >
-              Home
+              Welcome
             </Link>
             <Link
               href="/features"
@@ -61,11 +61,11 @@ const Navigation = () => {
             </Link>
             <Link
               href="/signup"
-              className={
+              className={`inline-flex items-center px-4 py-2 rounded-full border-2 transition-colors font-bold ${
                 isActive("/signup")
-                  ? "text-orange-600"
-                  : "text-gray-700 hover:text-orange-600"
-              }
+                  ? "border-orange-300 text-orange-600 bg-orange-50"
+                  : "border-gray-200 text-gray-700 hover:border-orange-300 hover:text-orange-600"
+              }`}
             >
               Get Started
             </Link>
@@ -127,11 +127,11 @@ const Navigation = () => {
               <Link
                 href="/signup"
                 onClick={() => setIsOpen(false)}
-                className={
+                className={`block mx-3 my-2 px-4 py-2 rounded-full text-center text-base font-medium border-2 transition-colors ${
                   isActive("/signup")
-                    ? "block px-3 py-2 rounded-md text-base font-medium text-orange-600 bg-orange-50"
-                    : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
-                }
+                    ? "border-orange-300 text-orange-600 bg-orange-50"
+                    : "border-gray-200 text-gray-700 hover:border-orange-300 hover:text-orange-600"
+                }`}
               >
                 Get Started
               </Link>
