@@ -20,6 +20,7 @@ export type TranslationKey =
   | `nav.${keyof typeof enTranslations.nav}`
   | `home.${keyof typeof enTranslations.home}`
   | `chat.${keyof typeof enTranslations.chat}`
+  | `comingSoon.${keyof typeof enTranslations.comingSoon}`
   | `footer.${keyof typeof enTranslations.footer}`;
 
 export function getTranslation(locale: Locale, key: TranslationKey): string {

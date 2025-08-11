@@ -36,6 +36,19 @@
     "typing": "en train d'écrire…",
     "welcomeMessage": "Bonjour ! Je suis votre serveur IA. Demandez-moi n'importe quoi sur le menu ou commencez une commande."
   },
+  "comingSoon": {
+    "title": "Bientôt Disponible",
+    "titleHighlight": "Révolution du Serveur IA",
+    "subtitle": "Nous mettons la touche finale à l'avenir du service de restaurant. Notre serveur IA transformera la façon dont les clients commandent et interagissent avec votre restaurant.",
+    "joinWaitlist": "Rejoindre la Liste d'Attente",
+    "launchingSoon": "Lancement Bientôt",
+    "launchingSoonDesc": "Nous travaillons dur pour vous apporter l'expérience de serveur IA la plus avancée.",
+    "exclusiveAccess": "Accès Exclusif",
+    "exclusiveAccessDesc": "Les membres de la liste d'attente obtiennent un accès prioritaire et des prix de lancement spéciaux.",
+    "stayUpdated": "Restez à Jour",
+    "stayUpdatedDesc": "Soyez le premier à savoir quand nous serons en ligne avec des mises à jour exclusives.",
+    "followProgress": "Suivez nos progrès et faites partie de la révolution des restaurants."
+  },
   "footer": {
     "copyright": "© 2024 Meino. Tous droits réservés.",
     "beFirstTitle": "Soyez Premier dans la File",

@@ -36,6 +36,19 @@
     "typing": "tippt…",
     "welcomeMessage": "Hallo! Ich bin Ihr KI-Server. Fragen Sie mich alles über die Speisekarte oder beginnen Sie eine Bestellung."
   },
+  "comingSoon": {
+    "title": "Bald Verfügbar",
+    "titleHighlight": "KI-Kellner Revolution",
+    "subtitle": "Wir geben den letzten Schliff für die Zukunft des Restaurantservice. Unser KI-Kellner wird die Art verändern, wie Kunden bestellen und mit Ihrem Restaurant interagieren.",
+    "joinWaitlist": "Warteliste Beitreten",
+    "launchingSoon": "Bald Verfügbar",
+    "launchingSoonDesc": "Wir arbeiten hart daran, Ihnen die modernste KI-Kellner-Erfahrung zu bieten.",
+    "exclusiveAccess": "Exklusiver Zugang",
+    "exclusiveAccessDesc": "Wartelisten-Mitglieder erhalten prioritären Zugang und spezielle Launch-Preise.",
+    "stayUpdated": "Bleiben Sie Informiert",
+    "stayUpdatedDesc": "Seien Sie der Erste, der erfährt, wann wir live gehen, mit exklusiven Updates.",
+    "followProgress": "Verfolgen Sie unsere Fortschritte und seien Sie Teil der Restaurant-Revolution."
+  },
   "footer": {
     "copyright": "© 2024 Meino. Alle Rechte vorbehalten.",
     "beFirstTitle": "Seien Sie Erste in der Reihe",

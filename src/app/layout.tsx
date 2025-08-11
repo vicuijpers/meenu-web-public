@@ -32,10 +32,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LocaleProvider>
-          <Navigation />
+          {/* <Navigation /> */}
           <main>{children}</main>
           <Footer />
-          <ChatWidget />
+          {/* <ChatWidget /> */}
         </LocaleProvider>
       </body>
     </html>

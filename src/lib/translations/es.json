@@ -36,6 +36,19 @@
     "typing": "escribiendo…",
     "welcomeMessage": "¡Hola! Soy tu servidor de IA. Pregúntame cualquier cosa sobre el menú o inicia un pedido."
   },
+  "comingSoon": {
+    "title": "Próximamente",
+    "titleHighlight": "Revolución del Camarero IA",
+    "subtitle": "Estamos dando los últimos retoques al futuro del servicio de restaurantes. Nuestro camarero IA transformará cómo los clientes ordenan e interactúan con tu restaurante.",
+    "joinWaitlist": "Unirse a Lista de Espera",
+    "launchingSoon": "Lanzamiento Próximo",
+    "launchingSoonDesc": "Estamos trabajando duro para brindarte la experiencia de camarero IA más avanzada.",
+    "exclusiveAccess": "Acceso Exclusivo",
+    "exclusiveAccessDesc": "Los miembros de la lista de espera obtienen acceso prioritario y precios especiales de lanzamiento.",
+    "stayUpdated": "Mantente Actualizado",
+    "stayUpdatedDesc": "Sé el primero en saber cuándo salgamos en vivo con actualizaciones exclusivas.",
+    "followProgress": "Sigue nuestro progreso y sé parte de la revolución de restaurantes."
+  },
   "footer": {
     "copyright": "© 2024 Meino. Todos los derechos reservados.",
     "beFirstTitle": "Sé el Primero en la Fila",

@@ -36,6 +36,19 @@
     "typing": "bezig met typen...",
     "welcomeMessage": "Hallo! Ik ben je AI-server. Vraag me alles over het menu of begin een bestelling."
   },
+  "comingSoon": {
+    "title": "Binnenkort Beschikbaar",
+    "titleHighlight": "AI-Ober Revolutie",
+    "subtitle": "We geven de laatste puntjes op de i aan de toekomst van restaurantservice. Onze AI-ober zal transformeren hoe klanten bestellen en communiceren met je restaurant.",
+    "joinWaitlist": "Wachtlijst Aanmelden",
+    "launchingSoon": "Binnenkort Gelanceerd",
+    "launchingSoonDesc": "We werken hard om je de meest geavanceerde AI-ober ervaring te brengen.",
+    "exclusiveAccess": "Exclusieve Toegang",
+    "exclusiveAccessDesc": "Wachtlijstleden krijgen prioritaire toegang en speciale lanceringsprijzen.",
+    "stayUpdated": "Blijf Op de Hoogte",
+    "stayUpdatedDesc": "Wees de eerste die weet wanneer we live gaan met exclusieve updates.",
+    "followProgress": "Volg onze voortgang en wees onderdeel van de restaurantrevolutie."
+  },
   "footer": {
     "copyright": "© 2024 Meino. Alle rechten voorbehouden.",
     "beFirstTitle": "Wees Eerste in de Rij",

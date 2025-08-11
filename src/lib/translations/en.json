@@ -20,7 +20,7 @@
     "joinWaitlist": "Join Waitlist",
     "learnMore": "Learn More",
     "waitlistDescription": "Be among the first to experience the future of restaurant service",
-    "benefitsTitle": "Order from our",
+    "benefitsTitle": "Our friendly AI waiter",
     "benefitsSubtitle": "Skip the wait, skip the hassle. Our AI-powered ordering system understands exactly what you want and gets it right every time.",
     "increaseRevenueTitle": "Increase Revenue",
     "increaseRevenueDesc": "AI-powered upselling suggests add-ons and premium items, boosting average order value by up to 25%.",
@@ -35,6 +35,19 @@
     "placeholder": "Ask or order…",
     "typing": "typing…",
     "welcomeMessage": "Hello! I'm your AI server. Ask me anything about the menu or start an order."
+  },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "titleHighlight": "AI Waiter Revolution",
+    "subtitle": "We're putting the finishing touches on the future of restaurant service. Our AI waiter will transform how customers order and interact with your restaurant.",
+    "joinWaitlist": "Join Waitlist",
+    "launchingSoon": "Launching Soon",
+    "launchingSoonDesc": "We're working hard to bring you the most advanced AI waiter experience.",
+    "exclusiveAccess": "Exclusive Access",
+    "exclusiveAccessDesc": "Waitlist members get priority access and special launch pricing.",
+    "stayUpdated": "Stay Updated",
+    "stayUpdatedDesc": "Be the first to know when we go live with exclusive updates.",
+    "followProgress": "Follow our progress and be part of the restaurant revolution."
   },
   "footer": {
     "copyright": "© 2024 Meino. All rights reserved.",
