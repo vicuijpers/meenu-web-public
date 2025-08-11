@@ -2,13 +2,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import { useLocale } from "../lib/locale-context";
+import { localeNames, locales } from "../lib/i18n";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const router = useRouter();
-  const { t } = useLocale();
+  const { t, locale, setLocale } = useLocale();
 
   const isActive = (path: string) => router.pathname === path;
 
@@ -65,12 +67,37 @@ const Navigation = () => {
             </Link>
             <div className="relative">
               <button
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
                 aria-label="Language"
                 className="inline-flex items-center gap-2 px-3 py-2 text-gray-700 hover:text-orange-600 transition-colors"
               >
                 <Globe className="h-4 w-4" />
-                <span className="hidden sm:inline">English</span>
+                <span className="hidden sm:inline font-mono text-sm">
+                  {locale.toUpperCase()}
+                </span>
+                <ChevronDown className="h-3 w-3" />
               </button>
+              {/* Language Dropdown */}
+              {isLanguageOpen && (
+                <div className="absolute top-full right-0 mt-1 w-32 bg-white border border-gray-200 rounded-md shadow-lg py-1 z-50">
+                  {locales.map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => {
+                        setLocale(lang);
+                        setIsLanguageOpen(false);
+                      }}
+                      className={`w-full text-left px-3 py-2 text-sm hover:bg-gray-50 transition-colors ${
+                        locale === lang
+                          ? "text-orange-600 bg-orange-50"
+                          : "text-gray-700"
+                      }`}
+                    >
+                      {localeNames[lang]}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </nav>
 
