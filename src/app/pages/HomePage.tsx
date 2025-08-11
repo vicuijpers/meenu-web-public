@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Clock, TrendingUp, Star, Headphones, Bell } from "lucide-react";
@@ -9,6 +9,15 @@ import EmailModal from "@/app/components/ui/EmailModal";
 const HomePage = () => {
   const { t } = useLocale();
   const [open, setOpen] = useState(false);
+
+  // Auto-open modal after 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="min-h-screen">
