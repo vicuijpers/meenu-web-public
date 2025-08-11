@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#4F46E5" stroke="#3730A3" stroke-width="2"/>
+  
+  <!-- Plate -->
+  <circle cx="16" cy="18" r="8" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="1"/>
+  <circle cx="16" cy="18" r="6" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="1"/>
+  
+  <!-- Fork -->
+  <rect x="8" y="8" width="1" height="12" fill="#6B7280"/>
+  <rect x="7.5" y="8" width="2" height="1" fill="#6B7280"/>
+  <rect x="7.5" y="10" width="2" height="1" fill="#6B7280"/>
+  <rect x="7.5" y="12" width="2" height="1" fill="#6B7280"/>
+  
+  <!-- Knife -->
+  <rect x="22" y="8" width="1" height="12" fill="#6B7280"/>
+  <polygon points="22,8 24,8 23,10" fill="#6B7280"/>
+  
+  <!-- AI indicator (circuit pattern) -->
+  <circle cx="16" cy="16" r="2" fill="#10B981" opacity="0.8"/>
+  <circle cx="16" cy="16" r="1" fill="#FFFFFF"/>
+</svg>
