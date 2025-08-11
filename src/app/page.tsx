@@ -1,5 +1,5 @@
-import HomePage from "./pages/HomePage";
+import ComingSoonPage from "./pages/ComingSoonPage";
 
 export default function Home() {
-  return <HomePage />;
+  return <ComingSoonPage />;
 }
