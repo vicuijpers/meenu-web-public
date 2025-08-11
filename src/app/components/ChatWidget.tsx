@@ -53,6 +53,15 @@ export default function ChatWidget() {
     if (open) messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [open, messages, isTyping]);
 
+  // Allow other components to toggle the widget via a window event
+  useEffect(() => {
+    const onToggle = () => setOpen((prev) => !prev);
+    window.addEventListener("toggle-chat", onToggle as EventListener);
+    return () => {
+      window.removeEventListener("toggle-chat", onToggle as EventListener);
+    };
+  }, []);
+
   const handleSend = () => {
     if (!inputText.trim()) return;
     const userMessage: Message = {

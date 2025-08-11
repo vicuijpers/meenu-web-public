@@ -1,14 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import {
-  Bot,
-  Clock,
-  TrendingUp,
-  Star,
-  Shield,
-  Headphones,
-  Bell,
-} from "lucide-react";
+import Link from "next/link";
+import { Clock, TrendingUp, Star, Headphones, Bell } from "lucide-react";
 
 const HomePage = () => {
   return (
@@ -26,7 +19,7 @@ const HomePage = () => {
                 className="h-16 w-16 text-orange-500"
               />
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-6 leading-[1]">
               Order from our
               <span className="text-orange-500 block">
                 AI waiter in seconds
@@ -44,10 +37,13 @@ const HomePage = () => {
                 <Bell className="h-5 w-5 mr-2" />
                 Join Waitlist
               </button>
-              <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-orange-300 hover:text-orange-600 transition-all duration-200">
+              <Link
+                href="/features"
+                className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-gray-700 bg-white border-2 border-gray-200 hover:border-orange-300 hover:text-orange-600 transition-all duration-200"
+              >
                 <Headphones className="h-5 w-5 mr-2" />
                 Learn More
-              </button>
+              </Link>
             </div>
             <p className="text-sm text-gray-500 mt-4">
               Be among the first to experience the future of restaurant service
@@ -60,7 +56,7 @@ const HomePage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
               Order from our
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -109,33 +105,6 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Be First in Line
-          </h2>
-          <p className="text-xl text-orange-100 mb-8">
-            Join the waitlist and be among the first restaurants to experience
-            the future of AI-powered service.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-orange-600 bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:scale-105">
-              <Bell className="h-5 w-5 mr-2" />
-              Join Waitlist
-            </button>
-            <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-white border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">
-              <Headphones className="h-5 w-5 mr-2" />
-              Request Demo
-            </button>
-          </div>
-          <p className="text-orange-100 mt-4 text-sm">
-            Early access for waitlist members • Priority support • Exclusive
-            launch pricing
-          </p>
         </div>
       </section>
     </div>

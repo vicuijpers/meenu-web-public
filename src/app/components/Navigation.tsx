@@ -13,17 +13,22 @@ const Navigation = () => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between items-center h-14">
+    <header className="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200 text-base">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-gray-900">
-            <Image src="/icon-meino.svg" alt="Meenu" width={24} height={24} />
-            <span className="font-semibold">Meenu</span>
+            <Image
+              src="/icon-meino.svg"
+              alt="AI Waiter"
+              width={32}
+              height={32}
+            />
+            <span className="font-semibold text-xl">AI Waiter</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+          <nav className="hidden md:flex items-center gap-6 font-bold">
             <Link
               href="/"
               className={
@@ -35,6 +40,16 @@ const Navigation = () => {
               Home
             </Link>
             <Link
+              href="/features"
+              className={
+                isActive("/features")
+                  ? "text-orange-600"
+                  : "text-gray-700 hover:text-orange-600"
+              }
+            >
+              Features
+            </Link>
+            <Link
               href="/pricing"
               className={
                 isActive("/pricing")
@@ -43,6 +58,16 @@ const Navigation = () => {
               }
             >
               Pricing
+            </Link>
+            <Link
+              href="/signup"
+              className={
+                isActive("/signup")
+                  ? "text-orange-600"
+                  : "text-gray-700 hover:text-orange-600"
+              }
+            >
+              Get Started
             </Link>
           </nav>
 
@@ -75,7 +100,7 @@ const Navigation = () => {
                     : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
                 }
               >
-                Home
+                Welcome
               </Link>
               <Link
                 href="/pricing"
@@ -87,6 +112,28 @@ const Navigation = () => {
                 }
               >
                 Pricing
+              </Link>
+              <Link
+                href="/features"
+                onClick={() => setIsOpen(false)}
+                className={
+                  isActive("/features")
+                    ? "block px-3 py-2 rounded-md text-base font-medium text-orange-600 bg-orange-50"
+                    : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
+                }
+              >
+                Features
+              </Link>
+              <Link
+                href="/signup"
+                onClick={() => setIsOpen(false)}
+                className={
+                  isActive("/signup")
+                    ? "block px-3 py-2 rounded-md text-base font-medium text-orange-600 bg-orange-50"
+                    : "block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-gray-50"
+                }
+              >
+                Get Started
               </Link>
               <Link
                 href="/chat"

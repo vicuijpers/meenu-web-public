@@ -1,41 +1,27 @@
 import React from "react";
-import {
-  Check,
-  Star,
-  Bot,
-  Shield,
-  TrendingUp,
-  Clock,
-  Bell,
-  Headphones,
-} from "lucide-react";
+import { Check, Bot, Shield, TrendingUp, Clock } from "lucide-react";
 
 const features = {
   free: [
     "1 restaurant",
     "Basic menu management",
+    "Computed voice assistant",
     "Up to 50 menu items",
     "QR code generation",
-    "Basic analytics",
-    "Email support",
   ],
   single: [
     "1 restaurant",
     "Advanced menu management",
-    "Unlimited menu items",
+    "AI voice assistant",
     "Custom branding",
-    "Advanced analytics",
-    "Priority support",
     "Table management",
     "Staff accounts (up to 5)",
+    "Priority support",
   ],
   multi: [
-    "Unlimited restaurants",
-    "Advanced menu management",
+    "Up to 5 restaurants",
     "Unlimited menu items",
-    "White-label solution",
-    "Enterprise analytics",
-    "24/7 premium support",
+    "Priority support",
     "Advanced table management",
     "Unlimited staff accounts",
     "Multi-location reporting",
@@ -47,14 +33,12 @@ const PricingPage = () => {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <section className="border-b border-gray-200 bg-gradient-to-br from-orange-50 via-white to-green-50">
+      <section className="">
         <div className="max-w-6xl mx-auto px-4 py-16 text-center">
-          <h1 className="mt-4 text-4xl font-bold text-gray-900">
+          <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 leading-[1]">
             Plans for every restaurant
           </h1>
-          <p className="mt-3 text-gray-600">
-            Start free. Upgrade when you grow.
-          </p>
+          <p className="text-gray-600">Start free. Upgrade when you grow.</p>
         </div>
       </section>
 
@@ -63,7 +47,7 @@ const PricingPage = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Free */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 flex flex-col h-full">
               <h3 className="text-xl font-semibold text-gray-900">Free Tier</h3>
               <p className="mt-1 text-sm text-gray-500">
                 Perfect for getting started
@@ -82,19 +66,13 @@ const PricingPage = () => {
                 ))}
               </ul>
 
-              <button
-                className="mt-8 w-full cursor-not-allowed rounded-full border border-gray-200 bg-gray-50 px-4 py-3 text-sm font-medium text-gray-500"
-                disabled
-              >
-                Current Plan
+              <button className="mt-auto w-full rounded-full border border-orange-300 bg-white px-4 py-3 text-sm font-semibold text-orange-700 hover:bg-orange-50">
+                Get Started
               </button>
-              <p className="mt-3 text-center text-xs text-gray-500">
-                You are currently on this plan
-              </p>
             </div>
 
             {/* Single (Most Popular) */}
-            <div className="relative rounded-2xl border-2 border-orange-300 bg-white p-6 sm:p-8 shadow-[0_10px_30px_-12px_rgba(234,88,12,0.25)]">
+            <div className="relative rounded-2xl border-2 border-orange-300 bg-white p-6 sm:p-8 shadow-[0_10px_30px_-12px_rgba(234,88,12,0.25)] flex flex-col h-full">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                 <span className="rounded-full bg-orange-600 px-3 py-1 text-xs font-semibold text-white shadow">
                   Most Popular
@@ -120,13 +98,13 @@ const PricingPage = () => {
                 ))}
               </ul>
 
-              <button className="mt-8 w-full rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-3 text-sm font-semibold text-white transition-colors hover:from-orange-600 hover:to-orange-700">
-                Upgrade Now
+              <button className="mt-auto w-full rounded-full bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-3 text-sm font-semibold text-white transition-colors hover:from-orange-600 hover:to-orange-700">
+                Get Started
               </button>
             </div>
 
             {/* Multiple */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8">
+            <div className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 flex flex-col h-full">
               <h3 className="text-xl font-semibold text-gray-900">
                 Multiple Restaurants
               </h3>
@@ -147,8 +125,8 @@ const PricingPage = () => {
                 ))}
               </ul>
 
-              <button className="mt-8 w-full rounded-full border border-orange-300 bg-white px-4 py-3 text-sm font-semibold text-orange-700 hover:bg-orange-50">
-                Contact Sales
+              <button className="mt-auto w-full rounded-full border border-orange-300 bg-white px-4 py-3 text-sm font-semibold text-orange-700 hover:bg-orange-50">
+                Get Started
               </button>
             </div>
           </div>
@@ -218,32 +196,7 @@ const PricingPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Be First in Line
-          </h2>
-          <p className="text-xl text-orange-100 mb-8">
-            Join the waitlist and be among the first restaurants to experience
-            the future of AI-powered service.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-orange-600 bg-white hover:bg-gray-50 transition-all duration-200 hover:shadow-lg hover:scale-105">
-              <Bell className="h-5 w-5 mr-2" />
-              Join Waitlist
-            </button>
-            <button className="inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold text-white border-2 border-white hover:bg-white hover:text-orange-600 transition-all duration-200">
-              <Headphones className="h-5 w-5 mr-2" />
-              Request Demo
-            </button>
-          </div>
-          <p className="text-orange-100 mt-4 text-sm">
-            Early access for waitlist members • Priority support • Exclusive
-            launch pricing
-          </p>
-        </div>
-      </section>
+      {/* CTA moved to global Footer */}
     </main>
   );
 };

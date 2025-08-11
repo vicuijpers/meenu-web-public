@@ -7,7 +7,7 @@ export default function SignupPage() {
     <div className="min-h-[70vh] bg-white">
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 mb-3 leading-[1]">
             Get started in minutes
           </h1>
           <p className="text-gray-600">
@@ -47,7 +47,7 @@ export default function SignupPage() {
 
         <div className="text-center">
           <Link
-            href="/chat"
+            href="#"
             className="inline-flex items-center px-6 py-3 rounded-full text-base font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all duration-200 hover:shadow-lg hover:scale-[1.02]"
           >
             <Bot className="h-5 w-5 mr-2" />
