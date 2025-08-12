@@ -44,10 +44,8 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-        <div className="flex items-center gap-2 text-whitem mx-auto">
-          <span className="font-semibold">Your AI Waiter</span>
-          <span className="text-white">•</span>
-          <span className="text-white">© {year}</span>
+        <div className="flex items-center gap-2 text-white mx-auto">
+          AI Waiter © 2025
         </div>
 
         {/* <nav className="flex items-center gap-5">
