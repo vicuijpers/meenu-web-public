@@ -7,26 +7,6 @@ type SubscribeBody = {
   email?: string;
 };
 
-// Helper function to get CORS headers
-function getCorsHeaders(origin: string | null) {
-  const allowedOrigins = [
-    "https://www.meenu.nl",
-    "http://localhost:5173",
-    "http://localhost:3000",
-    "http://localhost:3001",
-  ];
-
-  const isAllowedOrigin = origin && allowedOrigins.includes(origin);
-  const isSameOrigin = !origin; // No origin header means same-origin request
-
-  // If it's an allowed origin, return it; otherwise, return the first allowed origin
-  const corsOrigin = isAllowedOrigin ? origin : allowedOrigins[0];
-
-  return {
-    "Access-Control-Allow-Origin": corsOrigin,
-  };
-}
-
 function getPrivateKey(env: NodeJS.ProcessEnv): string | null {
   let key = env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY_BASE64
     ? Buffer.from(
@@ -98,31 +78,11 @@ async function createSheetsClient(env: NodeJS.ProcessEnv) {
 }
 
 export async function POST(req: Request) {
-  const origin = req.headers.get("origin");
-
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new NextResponse(null, {
-      status: 200,
-      headers: {
-        ...getCorsHeaders(origin),
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
-    });
-  }
-
   try {
     const { email }: SubscribeBody = await req.json();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return NextResponse.json(
-        { error: "Invalid email" },
-        {
-          status: 400,
-          headers: getCorsHeaders(origin),
-        }
-      );
+      return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
 
     const sheets = await createSheetsClient(process.env);
@@ -150,35 +110,19 @@ export async function POST(req: Request) {
     if (result.status !== 200) {
       return NextResponse.json(
         { error: "Failed to write to sheet" },
-        {
-          status: 500,
-          headers: getCorsHeaders(origin),
-        }
+        { status: 500 }
       );
     }
 
-    return NextResponse.json(
-      { success: true },
-      {
-        headers: getCorsHeaders(origin),
-      }
-    );
+    return NextResponse.json({ success: true });
   } catch (err: unknown) {
     console.error("/api/subscribe error:", err);
     const message = err instanceof Error ? err.message : "Unexpected error";
-    return NextResponse.json(
-      { error: message },
-      {
-        status: 500,
-        headers: getCorsHeaders(origin),
-      }
-    );
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
 
-export async function GET(req: Request) {
-  const origin = req.headers.get("origin");
-
+export async function GET() {
   try {
     const env = process.env;
     const privateKey = getPrivateKey(env);
@@ -196,10 +140,7 @@ export async function GET(req: Request) {
     if (missing.length) {
       return NextResponse.json(
         { ok: false, error: "Missing env vars", missing },
-        {
-          status: 500,
-          headers: getCorsHeaders(origin),
-        }
+        { status: 500 }
       );
     }
 
@@ -207,10 +148,7 @@ export async function GET(req: Request) {
     if (!validation.valid) {
       return NextResponse.json(
         { ok: false, error: validation.error },
-        {
-          status: 500,
-          headers: getCorsHeaders(origin),
-        }
+        { status: 500 }
       );
     }
 
@@ -225,21 +163,10 @@ export async function GET(req: Request) {
       meta.data.sheets?.[0]?.properties?.title ||
       "Sheet1";
 
-    return NextResponse.json(
-      { ok: true, sheetName },
-      {
-        headers: getCorsHeaders(origin),
-      }
-    );
+    return NextResponse.json({ ok: true, sheetName });
   } catch (err) {
     console.error("/api/subscribe GET health error:", err);
     const message = err instanceof Error ? err.message : "Unexpected error";
-    return NextResponse.json(
-      { ok: false, error: message },
-      {
-        status: 500,
-        headers: getCorsHeaders(origin),
-      }
-    );
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
   }
 }
