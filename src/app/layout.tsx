@@ -32,7 +32,7 @@ export default function RootLayout({
       >
         <LocaleProvider>
           {/* <Navigation /> */}
-          <GoogleAnalytics gaId="G-5JSK7NNWGN" />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID ?? ""} />
           <main>{children}</main>
           <Footer />
           {/* <ChatWidget /> */}
