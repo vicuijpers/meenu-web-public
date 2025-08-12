@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/app/components/Navigation";
 import Footer from "@/app/components/Footer";
-import ChatWidget from "@/app/components/ChatWidget";
+import GoogleAnalytics from "@/app/components/GoogleAnalytics";
 import { LocaleProvider } from "@/lib/locale-context";
 
 const geistSans = Geist({
@@ -33,6 +32,7 @@ export default function RootLayout({
       >
         <LocaleProvider>
           {/* <Navigation /> */}
+          <GoogleAnalytics gaId="G-5JSK7NNWGN" />
           <main>{children}</main>
           <Footer />
           {/* <ChatWidget /> */}
