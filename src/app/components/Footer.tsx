@@ -5,10 +5,10 @@ import { useLocale } from "@/lib/locale-context";
 import { useEffect, useState } from "react";
 import EmailModal from "@/app/components/ui/EmailModal";
 import Link from "next/link";
+import { BUSINESS_CONFIG } from "@/lib/config";
 
 export default function Footer() {
   const { t } = useLocale();
-  const year = new Date().getFullYear();
   const [open, setOpen] = useState(false);
 
   // Auto-open modal after 3 seconds
@@ -57,13 +57,15 @@ export default function Footer() {
 
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
         <div className="flex flex-col sm:flex-row items-center gap-2 text-white">
-          <span>AI Waiter © {year}</span>
+          <span>
+            {BUSINESS_CONFIG.displayName} © {BUSINESS_CONFIG.copyrightYear}
+          </span>
           <span className="hidden sm:inline">•</span>
           <a
             className="underline hover:text-orange-200"
-            href="mailto:support@aiwaiter.app"
+            href={`mailto:${BUSINESS_CONFIG.supportEmail}`}
           >
-            support@aiwaiter.app
+            {BUSINESS_CONFIG.supportEmail}
           </a>
         </div>
 

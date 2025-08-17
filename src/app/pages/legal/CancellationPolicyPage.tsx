@@ -5,8 +5,8 @@ export default function CancellationPolicyPage() {
     <section className="max-w-3xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4">Cancellation Policy</h1>
       <p className="text-gray-600 mb-8">
-        You can cancel your Meino subscription at any time from your account or
-        by contacting support.
+        You can cancel your AI Waiter subscription at any time from your account
+        or by contacting support.
       </p>
 
       <div className="space-y-6 bg-white rounded-xl p-6 shadow-sm">
@@ -24,9 +24,9 @@ export default function CancellationPolicyPage() {
               Contact support at{" "}
               <a
                 className="text-orange-600 underline"
-                href="mailto:support@meino.ai"
+                href="mailto:support@aiwaiter.app"
               >
-                support@meino.ai
+                support@aiwaiter.app
               </a>{" "}
               with your account email, or
             </li>

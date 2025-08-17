@@ -5,7 +5,7 @@ export default function RefundPolicyPage() {
     <section className="max-w-3xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4">Refund & Dispute Policy</h1>
       <p className="text-gray-600 mb-8">
-        This policy explains how refunds and disputes are handled for Meino
+        This policy explains how refunds and disputes are handled for AI Waiter
         subscriptions and services.
       </p>
 
@@ -25,9 +25,9 @@ export default function RefundPolicyPage() {
             believe you were charged in error, contact us at{" "}
             <a
               className="text-orange-600 underline"
-              href="mailto:support@meino.ai"
+              href="mailto:support@aiwaiter.app"
             >
-              support@meino.ai
+              support@aiwaiter.app
             </a>{" "}
             within 14 days of the charge.
           </p>
@@ -44,9 +44,9 @@ export default function RefundPolicyPage() {
             please contact us first at{" "}
             <a
               className="text-orange-600 underline"
-              href="mailto:support@meino.ai"
+              href="mailto:support@aiwaiter.app"
             >
-              support@meino.ai
+              support@aiwaiter.app
             </a>
             .
           </p>

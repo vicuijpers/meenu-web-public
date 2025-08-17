@@ -16,9 +16,9 @@ export default function ContactPage() {
             Support:{" "}
             <a
               className="text-orange-600 underline"
-              href="mailto:support@meino.ai"
+              href="mailto:support@aiwaiter.app"
             >
-              support@meino.ai
+              support@aiwaiter.app
             </a>
           </p>
         </div>

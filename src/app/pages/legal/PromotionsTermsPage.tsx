@@ -7,7 +7,7 @@ export default function PromotionsTermsPage() {
         Promotions: Terms & Conditions
       </h1>
       <p className="text-gray-600 mb-8">
-        These terms apply to promotional offers provided by Meino (discount
+        These terms apply to promotional offers provided by AI Waiter (discount
         codes, free months, beta credits, etc.).
       </p>
 

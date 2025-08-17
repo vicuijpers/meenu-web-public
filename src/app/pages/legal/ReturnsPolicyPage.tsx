@@ -5,7 +5,7 @@ export default function ReturnsPolicyPage() {
     <section className="max-w-3xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4">Returns & Shipping Policy</h1>
       <p className="text-gray-600 mb-8">
-        Meino provides software services and does not sell or ship physical
+        AI Waiter provides software services and does not sell or ship physical
         goods. As a result, there are no returns or shipping processes
         applicable.
       </p>
@@ -17,9 +17,9 @@ export default function ReturnsPolicyPage() {
             was made for physical goods in error, contact us at{" "}
             <a
               className="text-orange-600 underline"
-              href="mailto:support@meino.ai"
+              href="mailto:support@aiwaiter.app"
             >
-              support@meino.ai
+              support@aiwaiter.app
             </a>
             .
           </p>

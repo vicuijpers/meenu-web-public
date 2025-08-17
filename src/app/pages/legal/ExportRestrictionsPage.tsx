@@ -5,7 +5,7 @@ export default function ExportRestrictionsPage() {
     <section className="max-w-3xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4">Legal & Export Restrictions</h1>
       <p className="text-gray-600 mb-8">
-        Meino provides software-as-a-service. Our services must be used in
+        AI Waiter provides software-as-a-service. Our services must be used in
         compliance with applicable laws, including export control and sanctions
         regulations.
       </p>
@@ -21,8 +21,8 @@ export default function ExportRestrictionsPage() {
         <div>
           <h2 className="text-xl font-semibold mb-2">Compliance</h2>
           <p>
-            By using Meino, you confirm that you are not located in an embargoed
-            country and are not on any government sanctions list.
+            By using AI Waiter, you confirm that you are not located in an
+            embargoed country and are not on any government sanctions list.
           </p>
         </div>
       </div>
