@@ -5,6 +5,8 @@ export const runtime = "nodejs";
 
 type SubscribeBody = {
   email?: string;
+  city?: string;
+  numberOfRestaurants?: number;
 };
 
 function getPrivateKey(env: NodeJS.ProcessEnv): string | null {
@@ -79,11 +81,17 @@ async function createSheetsClient(env: NodeJS.ProcessEnv) {
 
 export async function POST(req: Request) {
   try {
-    const { email }: SubscribeBody = await req.json();
+    const { email, city, numberOfRestaurants }: SubscribeBody = await req.json();
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
     }
+
+    const cityClean = city?.toString().trim() || "";
+    const restaurantsNum =
+      typeof numberOfRestaurants === "number" && isFinite(numberOfRestaurants)
+        ? numberOfRestaurants
+        : "";
 
     const sheets = await createSheetsClient(process.env);
 
@@ -96,14 +104,23 @@ export async function POST(req: Request) {
       sheetName = meta.data.sheets?.[0]?.properties?.title || "Sheet1";
     }
 
-    const range = `${sheetName}!A:C`;
+    // Columns: A Timestamp, B Email, C IP, D City, E #Restaurants
+    const range = `${sheetName}!A:E`;
     const timestamp = new Date().toISOString();
     const result = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEETS_SPREADSHEET_ID!,
       range,
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [[timestamp, email, req.headers.get("x-forwarded-for") || ""]],
+        values: [
+          [
+            timestamp,
+            email,
+            req.headers.get("x-forwarded-for") || "",
+            cityClean,
+            restaurantsNum,
+          ],
+        ],
       },
     });
 

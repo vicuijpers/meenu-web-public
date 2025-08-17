@@ -15,6 +15,8 @@ export default function EmailModal({
   subtitle = "Leave your email to get notified and early access.",
 }: Props) {
   const [email, setEmail] = useState("");
+  const [city, setCity] = useState("");
+  const [restaurants, setRestaurants] = useState<string>("");
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -37,13 +39,22 @@ export default function EmailModal({
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email,
+          city: city?.trim() || undefined,
+          numberOfRestaurants:
+            restaurants && !Number.isNaN(Number(restaurants))
+              ? Number(restaurants)
+              : undefined,
+        }),
       });
       const data = await res.json();
       if (res.ok) {
         setStatus("success");
         setMessage("Thanks! We’ll be in touch soon.");
         setEmail("");
+        setCity("");
+        setRestaurants("");
       } else {
         setStatus("error");
         setMessage(data?.error || "Something went wrong. Try again.");
@@ -65,6 +76,27 @@ export default function EmailModal({
           <p className="text-gray-600 text-sm mt-1">{subtitle}</p>
         </div>
         <form onSubmit={submit} className="space-y-3">
+          <div className="grid grid-cols-1 gap-3">
+            <input
+              type="number"
+              min={0}
+              inputMode="numeric"
+              pattern="[0-9]*"
+              value={restaurants}
+              onChange={(e) => setRestaurants(e.target.value)}
+              placeholder="Number of restaurants"
+              className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              aria-label="Number of restaurants"
+            />
+            <input
+              type="text"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              placeholder="City"
+              className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              aria-label="City"
+            />
+          </div>
           <input
             type="email"
             required
