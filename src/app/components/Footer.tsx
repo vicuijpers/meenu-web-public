@@ -4,6 +4,7 @@ import { Bell } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import { useEffect, useState } from "react";
 import EmailModal from "@/app/components/ui/EmailModal";
+import Link from "next/link";
 
 export default function Footer() {
   const { t } = useLocale();
@@ -55,21 +56,22 @@ export default function Footer() {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-        <div className="flex items-center gap-2 text-white mx-auto">
-          AI Waiter © 2025
+        <div className="flex flex-col sm:flex-row items-center gap-2 text-white">
+          <span>AI Waiter © {year}</span>
+          <span className="hidden sm:inline">•</span>
+          <a
+            className="underline hover:text-orange-200"
+            href="mailto:support@aiwaiter.app"
+          >
+            support@aiwaiter.app
+          </a>
         </div>
 
-        {/* <nav className="flex items-center gap-5">
-          <Link href="/" className="text-white hover:text-orange-200">
-            {t("nav.home")}
+        <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <Link href="/legal" className="text-white hover:text-orange-200">
+            Policies
           </Link>
-          <Link href="/pricing" className="text-white hover:text-orange-200">
-            {t("nav.pricing")}
-          </Link>
-          <Link href="/signup" className="text-white hover:text-orange-200">
-            {t("nav.signup")}
-          </Link>
-        </nav> */}
+        </nav>
 
         <EmailModal
           open={open}

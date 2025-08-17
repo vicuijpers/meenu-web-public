@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Meino - your AI Waiter",
-  description: "AI-powered restaurant management",
+  title: "AI Waiter – aiwaiter.app",
+  description: "AI-powered ordering and customer service for restaurants",
 };
 
 export default function RootLayout({

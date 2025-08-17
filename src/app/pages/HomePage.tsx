@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { Clock, TrendingUp, Star, Headphones, Bell } from "lucide-react";
+import { Clock, TrendingUp, Star, Bell } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
 import EmailModal from "@/app/components/ui/EmailModal";
 
@@ -71,6 +70,22 @@ const HomePage = () => {
         title={t("comingSoon.exclusiveAccess")}
         subtitle={t("comingSoon.exclusiveAccessDesc")}
       />
+
+      {/* What is AI Waiter */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            What is AI Waiter?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            AI Waiter is a digital service platform that allows restaurants to
+            add their menus while enabling an AI-powered assistant to serve
+            customers directly through the app. The AI can take orders, answer
+            menu questions, suggest upsells, and streamline communication
+            between customers and waiters.
+          </p>
+        </div>
+      </section>
 
       {/* Benefits for Restaurant Owners */}
       <section className="py-20 bg-white">

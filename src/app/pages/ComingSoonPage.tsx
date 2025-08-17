@@ -100,6 +100,21 @@ const ComingSoonPage = () => {
           subtitle={t("comingSoon.exclusiveAccessDesc")}
         />
       </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 ">
+            What is AI Waiter?
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            AI Waiter is a digital service platform that allows restaurants to
+            add their menus while enabling an AI-powered assistant to serve
+            customers directly through the app. The AI can take orders, answer
+            menu questions, suggest upsells, and streamline communication
+            between customers and waiters.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
